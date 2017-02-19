@@ -16,7 +16,7 @@ services:
     volumes_from: 
        - §§INSTANCE-orientdb-data
     restart: unless-stopped
-	command: "/orientdb/bin/dserver.sh -Dnetwork.maxConcurrentSessions=2000 -Dstorage.diskCache.bufferSize=6000"
+    command: "/orientdb/bin/dserver.sh -Dnetwork.maxConcurrentSessions=2000 -Dstorage.diskCache.bufferSize=6000"
 
   §§INSTANCE-orientdb-data:
     image: busybox
