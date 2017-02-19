@@ -8,9 +8,9 @@ services:
       - "§§PORT1:2480"
       - "§§PORT2:2424"
     environment:
-      ES_JAVA_OPTS='-Xmx8g'
-      ORIENTDB_ROOT_PASSWORD=§§ORIENTDB_ROOT_PASSWORD
-      ORIENTDB_NODE_NAME='node1'
+      ES_JAVA_OPTS: '-Xmx8g'
+      ORIENTDB_ROOT_PASSWORD: §§ORIENTDB_ROOT_PASSWORD
+      ORIENTDB_NODE_NAME: 'node1'
     depends_on:
        - §§INSTANCE-orientdb-data:
     volumes_from: 
