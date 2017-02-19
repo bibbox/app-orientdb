@@ -1,4 +1,4 @@
 {
-  runningcontainers:["§§INSTANCE-elasticsearch", "§§INSTANCE-logstash", "§§INSTANCE-kibana"],
-  supportcontainers:["§§INSTANCE-elasticstack-data"]
+  runningcontainers:["§§INSTANCE-orientdb"],
+  supportcontainers:["§§INSTANCE-orientdb-data"]
 }
