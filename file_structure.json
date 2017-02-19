@@ -2,7 +2,7 @@
     "makefolders":[
   	  "data/orientdb/config",
   	  "data/orientdb/databases",
-  	  "ddata/orientdb/backup"	  
+  	  "data/orientdb/backup"	  
     ],
     "copyfiles":[
         {
