@@ -12,9 +12,9 @@ services:
       ORIENTDB_ROOT_PASSWORD: §§ORIENTDB_ROOT_PASSWORD
       ORIENTDB_NODE_NAME: 'node1'
     depends_on:
-       - §§INSTANCE-orientdb-data:
+       - §§INSTANCE-orientdb-data
     volumes_from: 
-       - §§INSTANCE-orientdb-data:
+       - §§INSTANCE-orientdb-data
     restart: unless-stopped
 
   §§INSTANCE-orientdb-data:
