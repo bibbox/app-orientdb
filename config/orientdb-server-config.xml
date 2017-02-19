@@ -46,7 +46,7 @@
     </network>
     <storages/>
     <users>
-        <user resources="*" password="bibbox4ever" name="admin"/>
+        <user resources="*" password="root" name="root"/>
     </users>
     <security>
         <users/>
