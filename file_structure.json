@@ -13,5 +13,8 @@
             "source":"config/security.json",
             "destination":"data/orientdb/config/security.json"
         }
-    ]
+    ], 
+	"configs-to-adapt" : [
+		"config/orientdb-server-config.xml"		
+	]
 }
