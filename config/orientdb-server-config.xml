@@ -45,6 +45,9 @@
         </listeners>
     </network>
     <storages/>
+    <users>
+        <user resources="*" password="bibbox4ever" name="admin"/>
+    </users>
     <security>
         <users/>
         <resources/>
