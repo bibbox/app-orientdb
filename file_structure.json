@@ -15,6 +15,6 @@
         }
     ], 
 	"configs-to-adapt" : [
-		"config/orientdb-server-config.xml"		
+		"data/orientdb/config/orientdb-server-config.xml"		
 	]
 }
