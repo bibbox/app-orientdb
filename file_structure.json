@@ -1,0 +1,17 @@
+{
+    "makefolders":[
+  	  "data/orientdb/config",
+  	  "data/orientdb/databases",
+  	  "ddata/orientdb/backup"	  
+    ],
+    "copyfiles":[
+        {
+            "source":"config/orientdb-server-config.xml",
+            "destination":"data/orientdb/config/orientdb-server-config.xml"
+        },
+        {
+            "source":"config/security.json",
+            "destination":"data/orientdb/config/security.json"
+        }
+    ]
+}

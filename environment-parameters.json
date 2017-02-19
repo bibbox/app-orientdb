@@ -1,0 +1,11 @@
+[
+    {
+       "id":"ORIENTDB_ROOT_PASSWORD",
+       "display_name":"OrientDB Root Password",
+       "type":"PASSWORD",
+       "default_value":"",
+       "description":"Root Password for OrientDB,rember well !",
+       "min_length": "1",
+       "max_length": "128"
+    }
+]
