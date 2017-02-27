@@ -46,7 +46,7 @@
     </network>
     <storages/>
     <users>
-        <user resources="*" password="root" name="root"/>
+        <user resources="*" password="§§ORIENTDB_ROOT_PASSWORD" name="root"/>
     </users>
     <security>
         <users/>
