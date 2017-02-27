@@ -20,7 +20,7 @@
 		{
             "source":"config/hazelcast.xml",
             "destination":"data/orientdb/config/hazelcast.xml"
-        }
+        },
 		{
             "source":"config/orientdb-client-log.properties",
             "destination":"data/orientdb/config/orientdb-client-log.properties"
