@@ -2,7 +2,7 @@ version: '2'
 services:
 
   §§INSTANCE-orientdb:
-    image: orientdb:2.0.18
+    image: orientdb:2.2.17
     container_name: §§INSTANCE-orientdb
     ports:
       - "§§PORT1:2480"
