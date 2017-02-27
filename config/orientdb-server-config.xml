@@ -1,8 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <orient-server>
+    <handlers>
+        <handler class="com.orientechnologies.orient.graph.handler.OGraphServerHandler">
+            <parameters>
+                <parameter value="true" name="enabled"/>
+                <parameter value="50" name="graph.pool.max"/>
+            </parameters>
+        </handler>
+        <handler class="com.orientechnologies.orient.server.hazelcast.OHazelcastPlugin">
+            <parameters>
+                <parameter value="${distributed}" name="enabled"/>
+                <parameter value="${ORIENTDB_HOME}/config/default-distributed-db-config.json" name="configuration.db.default"/>
+                <parameter value="${ORIENTDB_HOME}/config/hazelcast.xml" name="configuration.hazelcast"/>
+            </parameters>
+        </handler>
+        <handler class="com.orientechnologies.orient.server.handler.OJMXPlugin">
+            <parameters>
+                <parameter value="false" name="enabled"/>
+                <parameter value="true" name="profilerManaged"/>
+            </parameters>
+        </handler>
+        <handler class="com.orientechnologies.orient.server.handler.OAutomaticBackup">
+            <parameters>
+                <parameter value="false" name="enabled"/>
+                <parameter value="${ORIENTDB_HOME}/config/automatic-backup.json" name="config"/>
+            </parameters>
+        </handler>
+        <handler class="com.orientechnologies.orient.server.handler.OServerSideScriptInterpreter">
+            <parameters>
+                <parameter value="true" name="enabled"/>
+                <parameter value="SQL" name="allowedLanguages"/>
+            </parameters>
+        </handler>
+    </handlers>
     <network>
         <sockets>
-            <socket implementation="com.orientechnologies.orient.server.network.OServerSSLSocketFactory" name="ssl">
+            <socket implementation="com.orientechnologies.orient.server.network.OServerTLSSocketFactory" name="ssl">
                 <parameters>
                     <parameter value="false" name="network.ssl.clientAuth"/>
                     <parameter value="config/cert/orientdb.ks" name="network.ssl.keyStore"/>
@@ -11,7 +44,7 @@
                     <parameter value="password" name="network.ssl.trustStorePassword"/>
                 </parameters>
             </socket>
-            <socket implementation="com.orientechnologies.orient.server.network.OServerSSLSocketFactory" name="https">
+            <socket implementation="com.orientechnologies.orient.server.network.OServerTLSSocketFactory" name="https">
                 <parameters>
                     <parameter value="false" name="network.ssl.clientAuth"/>
                     <parameter value="config/cert/orientdb.ks" name="network.ssl.keyStore"/>
@@ -46,11 +79,13 @@
     </network>
     <storages/>
     <users>
-        <user resources="*" password="§§ORIENTDB_ROOT_PASSWORD" name="root"/>
+        <user resources="*" password="{PBKDF2WithHmacSHA256}9E35D55B3612963D19E406470B30990E65FE5BB66680F1C7:B9E85739AA2272A9245C13FC88F794CCB4B9D0FFC02FA4DA:65536" name="root"/>
+        <user resources="connect,server.listDatabases,server.dblist" password="{PBKDF2WithHmacSHA256}3C7588566106AE19A22591BAAA2B882A19D224CEE1784ADD:D1C903573520076ABEBF34CD21EF6C0A4B79A39E3F963313:65536" name="guest"/>
     </users>
-    <security>
-        <users/>
-        <resources/>
-    </security>
+    <properties>
+        <entry value="1" name="db.pool.min"/>
+        <entry value="50" name="db.pool.max"/>
+        <entry value="false" name="profiler.enabled"/>
+    </properties>
     <isAfterFirstTime>true</isAfterFirstTime>
 </orient-server>
