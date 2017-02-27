@@ -16,7 +16,19 @@
 		{
             "source":"config/security.json",
             "destination":"data/orientdb/config/security.json"
+        },
+		{
+            "source":"config/hazelcast.xml",
+            "destination":"data/orientdb/config/hazelcast.xml"
         }
+		{
+            "source":"config/orientdb-client-log.properties",
+            "destination":"data/orientdb/config/orientdb-client-log.properties"
+        },
+		{
+            "source":"config/orientdb-server-log.properties",
+            "destination":"data/orientdb/config/orientdb-server-log.properties"
+        }		
     ], 
 	"configs-to-adapt" : [
 		"data/orientdb/config/orientdb-server-config.xml"		
