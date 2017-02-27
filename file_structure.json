@@ -10,6 +10,10 @@
             "destination":"data/orientdb/config/orientdb-server-config.xml"
         },
         {
+            "source":"config/default-distributed-db-config.json",
+            "destination":"data/orientdb/config/default-distributed-db-config.json"
+        },
+		{
             "source":"config/security.json",
             "destination":"data/orientdb/config/security.json"
         }
